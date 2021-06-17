@@ -77,7 +77,27 @@ const thoughtController = {
                 return res.json(dbUserData);
             })
             .catch(err => res.json(err));
+    },
+
+    
+    // delete thought by _id
+    addReaction({ params }, res) {
+        res.end();
+        // Thought.findOneAndDelete({ _id: params.thoughtId })
+            // .then(dbUserData => {
+            //     if (!dbUserData) {
+            //         res.status(404).json({ message: 'No user found with that ID!' });
+            //         return;
+            //     }
+            //     return res.json(dbUserData);
+            // })
+            // .catch(err => res.json(err));
+    },
+
+    deleteReaction({ params},res){
+        res.end()
     }
 };
+
 
 module.exports = thoughtController;
